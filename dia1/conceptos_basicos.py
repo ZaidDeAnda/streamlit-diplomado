@@ -1,5 +1,5 @@
 import streamlit as st
-from sklearn import datasets
+import seaborn as sns
 import pandas as pd
 
 # Mostrar código básico de ejemplo
@@ -107,7 +107,7 @@ st.subheader("3. Trabajando con datos")
 # Ilustración de cargar datos de pandas
 st.write("También podemos trabajar con pandas directamente! Carguemos el dataset de Iris")
 
-iris = datasets.load_iris()
+iris = sns.load_dataset('iris')
 
 df = pd.DataFrame(
     iris.data, 
