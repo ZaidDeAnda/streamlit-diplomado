@@ -54,7 +54,14 @@ Esto está escrito para que pueda ser usado como consulta, aún cuando no esté 
 
 st.info("Este texto sirve para dar información técnica")
 
-st.text("También habrá zonas llamadas *Zonas de código* hechas para que puedas practicar el tema que se esté viendo! Siempre vienen acompañadas de un enunciado de ejercicio en rojo")
+st.write("Usualmente ese texto está escondido detrás de botones como este:")
+
+if st.button("Mostrar más información:"):
+    st.info("este boton no hace nada, aveda")
+
+st.write("Así que asegurate de presionarlos!")
+
+st.write("También habrá zonas llamadas *Zonas de código* hechas para que puedas practicar el tema que se esté viendo! Siempre vienen acompañadas de un enunciado de ejercicio en rojo")
 
 st.warning("*Ejercicio*: Ve a la siguiente página")
 

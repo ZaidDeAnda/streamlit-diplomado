@@ -62,4 +62,6 @@ if st.button("Mostrar información", key="map"):
 
 st.header("Gráficos con plotly!")
 
+st.write("Finalmente, intentemos agregar unos gráficos con plotly usando los datos de iris.")
+
 st.success("Finalizado del día 1!")
