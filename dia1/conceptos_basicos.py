@@ -27,7 +27,6 @@ st.subheader("zona de código")
 st.divider()
 
 st.info("`st.write` funciona para escribir (casi) cualquier tipo de datos en streamlit. Puede ser texto, una lista, un diccionario, hasta una imagen!")
-
 st.write("Ahora escribamos tanto headers y subheaders")
 
 st.divider()
@@ -53,52 +52,37 @@ A continuación, algunos ejemplos básicos.
 
 # Ejemplo de botón
 st.subheader("Botones")
-if st.button("Haz clic aquí"):
-    st.write("¡Has hecho clic en el botón!")
+# Crea un botón aquí
+if st.button("Mostrar información", key="button"):
     st.info("`st.button` funciona de manera peculiar. Regresa un `True` cuando se presiona, y por ende puedes usarlo como condicional. Solo recuerda que streamlit se recarga al presionarlo!  Más info: [link](https://docs.streamlit.io/develop/api-reference/widgets/st.button)")
 
 
 # Ejemplo de selección
 st.subheader("Cajas de selección")
-opcion = st.selectbox("Selecciona una opción", ['Opción 1', 'Opción 2', 'Opción 3'])
-st.write(f"Elegiste: {opcion}")
+#Crea una caja aqui
 if st.button("Mostrar información", key="selectbox"):
     st.info("`st.selectbox` permite hacer una barra de selección para opciones preestablecidas.  Más info: [link](https://docs.streamlit.io/develop/api-reference/widgets/st.selectbox)")
 
 # Ejemplo de input de texto
 st.subheader("Entradas de texto")
-texto = st.text_input("Introduce tu nombre")
-st.write("Hola "+texto+"!")
+#Crea un text input aquí
 if st.button("Mostrar información", key="text_input"):
     st.info("`st.text_input` permite que introduzcas el texto que quieras al programa! Cuando presionas enter, se hace submit al texto y se actualiza la página. Más info: [link]( Más info: [link]( Más info: [link](https://docs.streamlit.io/develop/api-reference/widgets/st.text_input)")
 
 # Ejemplo de slider
 st.subheader("Sliders")
-numero = st.slider("Selecciona un número", 1, 100, 50)
-st.write(f"Seleccionast el número: {numero}")
+#Crea una slider aquí
 if st.button("Mostrar información", key="sliders"):
     st.info("`st.slider` permite hacer un slider de diferentes tipos valores, incluso con tiempo! Más info: [link](https://docs.streamlit.io/develop/api-reference/widgets/st.slider)")
 
 st.subheader("Slider de seleccion")
-color = st.select_slider(
-    "Selecciona un color",
-    options=[
-        "rojo",
-        "naranja",
-        "amarillo",
-        "verde",
-        "azul",
-        "indigo",
-        "violeta",
-    ],
-)
-st.write("Mi color favorito es: ", color)
+#Crea un select slider de colores aquí
 if st.button("Mostrar información", key="select_sliders"):
     st.info("`st.select_slider` permite hacer un slider de valores categóricos (no discretos). Más info: [link](https://docs.streamlit.io/develop/api-reference/widgets/st.select_slider)")
 
 # Ejemplo de checkbox 
 estado = st.checkbox("Form checkbox")
-st.write("El valor del checkbox es: "+str(estado))
+#Crea una checkbox aquí
 if st.button("Mostrar información", key="checkbox"):
     st.info("`st.checkbox` ayuda para valores booleanos interactivos. Puede ser util para una lista de tareas! Más info: [link](https://docs.streamlit.io/develop/api-reference/widgets/st.checkbox)")
 
@@ -107,15 +91,7 @@ st.subheader("3. Trabajando con datos")
 # Ilustración de cargar datos de pandas
 st.write("También podemos trabajar con pandas directamente! Carguemos el dataset de Iris")
 
-iris = sns.load_dataset('iris')
-
-df = pd.DataFrame(
-    iris.data, 
-    columns=iris.feature_names
-    )
-
-
-st.dataframe(df)
+#Carga del dataset de iris de seaborn y crea un dataframe a partir de el
 
 st.warning("*Ejercicio*: crea un slider para filtrar el dataframe de acuerdo a una columna")
 
@@ -127,14 +103,6 @@ st.warning("*Ejercicio*: crea un slider para filtrar el dataframe de acuerdo a u
 st.divider()
 
 st.subheader("zona de código")
-
-min_val_1 = st.slider("Selecciona una longitud de sépalo mínima", 0.0, 10.0)
-
-st.subheader("Dataset filtrado")
-
-filtered_df = df.loc[df['sepal length (cm)'] > min_val_1]
-
-st.write(filtered_df)
 
 st.divider()
 

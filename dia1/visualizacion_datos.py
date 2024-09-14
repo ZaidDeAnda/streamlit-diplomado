@@ -21,32 +21,28 @@ st.header("Tipos de gráficos")
 
 st.write("Primero exploraremos los tipos de gráficos nativos de streamlit:")
 st.subheader("Gráfico de area (area chart)")
-area_chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-st.area_chart(area_chart_data)
+#Crea un dataframe de datos random y grafícalo en un area chart
 if st.button("Mostrar información", key="area"):
     st.info("La documentación de la función se encuentra en este [link](https://docs.streamlit.io/develop/api-reference/charts/st.area_chart).")
 
 st.divider()
 
 st.subheader("Gráfico de barras (bar chart)")
-bar_chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-st.bar_chart(bar_chart_data)
+#Crea un dataframe de datos random y grafícalo en un bar chart
 if st.button("Mostrar información", key="bar"):
     st.info("La documentación de la función se encuentra en este [link](https://docs.streamlit.io/develop/api-reference/charts/st.bar_chart).")
 
 st.divider()
 
 st.subheader("Gráfico de linea (line chart)")
-line_chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-st.line_chart(line_chart_data)
+#Crea un dataframe de datos random y grafícalo en un line chart
 if st.button("Mostrar información", key="line"):
     st.info("La documentación de la función se encuentra en este [link](https://docs.streamlit.io/develop/api-reference/charts/st.line_chart).")
 
 st.divider()
 
 st.subheader("Gráfico de dispersión (scatter chart)")
-scatter_chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-st.scatter_chart(scatter_chart_data)
+#Crea un dataframe de datos random y grafícalo en un scatter chart
 if st.button("Mostrar información", key="scatter"):
     st.info("La documentación de la función se encuentra en este [link](https://docs.streamlit.io/develop/api-reference/charts/st.scatter_chart).")
 
@@ -60,11 +56,7 @@ st.divider()
 
 st.subheader("Mapas!")
 st.write("streamlit también permite gráficos de dispersión sobre mapas de forma 'nativa'")
-df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [21.12, -101.67],
-    columns=["lat", "lon"],
-)
-st.map(df)
+#Crea un dataset de datos random con las coordenadas de león, y columnas lat y lon, para posteriormente mostrar un mapa
 if st.button("Mostrar información", key="map"):
     st.info("La documentación de la función se encuentra en este [link](https://docs.streamlit.io/develop/api-reference/charts/st.map).")
 
