@@ -72,7 +72,7 @@ Para seguir los ejemplos y ejercicios de este repositorio, asegúrate de tener i
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ## Contacto
-Para cualquier duda o sugerencia, no dudes en contactarme a través de [tu correo electrónico].
+Para cualquier duda o sugerencia, no dudes en contactarme a través de mi correo zaidy.deanda@gmail.com.
 
 ---
 ¡Feliz aprendizaje y disfruta creando con Streamlit!
