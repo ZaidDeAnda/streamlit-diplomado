@@ -47,12 +47,11 @@ Para seguir los ejemplos y ejercicios de este repositorio, asegúrate de tener i
     ```
 
 4. Activa el entorno virtual
-Para windows:
+* Para windows:
     ```bash
     venv\Scripts\activate
     ```
-
-Para mac:
+* Para mac:
     ```bash
     Source venv/bin/activate
     ```
