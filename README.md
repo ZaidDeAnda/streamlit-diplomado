@@ -47,9 +47,14 @@ Para seguir los ejemplos y ejercicios de este repositorio, asegúrate de tener i
     ```
 
 4. Activa el entorno virtual
-
+Para windows:
     ```bash
-    source venv/Scripts/activate
+    venv\Scripts\activate
+    ```
+
+Para mac:
+    ```bash
+    Source venv/bin/activate
     ```
 
 5. Instala las dependencias necesarias:
@@ -62,6 +67,25 @@ Para seguir los ejemplos y ejercicios de este repositorio, asegúrate de tener i
 
     ```bash
     streamlit run demo.py
+    ```
+
+### Ya tengo creado el entorno, ¿Como accedo a el?
+
+1. Ir a la carpeta del proyecto
+
+    ```bash
+    cd streamlit-diplomado/
+    ```
+
+2. Activar el entorno
+Para windows:
+    ```bash
+    venv\Scripts\activate
+    ```
+
+Para mac:
+    ```bash
+    Source venv/bin/activate
     ```
 
 ## Recursos
