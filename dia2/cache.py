@@ -15,13 +15,8 @@ st.write("Para estos ejemplos, ahora vamos a conectarnos a nuestra base de datos
 
 #Inserte datos de DB
 
-conn = psycopg2.connect(
-    **params
-)
 
-#return_df = pd.read_sql_query('SELECT * From "Pinturas"', conn)
-
-#st.write(return_df)
+#Ejecutar query
 
 st.button("Presioname!")
 
@@ -40,18 +35,7 @@ def load_data(query, params):
     return pd.read_sql_query(query, conn)
 """)
 
-@st.cache_data
-def load_data(query, params):
-    conn = psycopg2.connect(
-        **params
-    )
-    return pd.read_sql_query(query, conn)
-
 st.write("Esta función solo se ejecutará cuando alguno de sus argumentos cambie.")
-
-cached_df = load_data('SELECT * From "Pinturas"', params)
-
-st.write(cached_df)
 
 st.write("Ahora comentemos el df anterior y dejemos solo el df en cache")
 
