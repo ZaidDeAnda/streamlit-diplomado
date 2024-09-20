@@ -8,7 +8,9 @@ pages = {
         st.Page("dia1/visualizacion_datos.py", title="Visualización de datos")
     ],
     "Día 2": [
-        st.Page("dia2/cache.py", title="Manejo de cache"),
+        st.Page("dia2/estado_sesion.py", title="Estado de sesión"),
+        st.Page("dia2/cache.py", title="Caché"),
+        st.Page("dia2/dashboard.py", title="Creación de Dashboards"),
     ],
 }
 
